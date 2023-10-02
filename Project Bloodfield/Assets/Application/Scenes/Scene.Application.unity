@@ -3143,7 +3143,7 @@ GameObject:
   - component: {fileID: 1295913129}
   - component: {fileID: 1295913128}
   m_Layer: 6
-  m_Name: Square
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3195,7 +3195,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3228,7 +3228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a700c09276aaede4783c2eee1cedcbaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  cam: {fileID: 519420031}
+  rb: {fileID: 1295913128}
+  speed: 5
 --- !u!50 &1295913128
 Rigidbody2D:
   serializedVersion: 4
@@ -3288,18 +3290,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0022518039, y: 0.0022515655}
+  m_Offset: {x: -0.0036062598, y: 0.15218344}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9908372, y: 0.9998437}
+  m_Size: {x: 0.091734946, y: 0.26484185}
   m_EdgeRadius: 0
 --- !u!1 &1379795205
 GameObject:
