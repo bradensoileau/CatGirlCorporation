@@ -5,18 +5,39 @@ using UnityEngine.XR;
 
 public class Movement : MonoBehaviour
 {
+    public Camera cam;
+    public Rigidbody2D rb;
+
     [SerializeField]
     float speed = 5f;
+    
+    Vector2 mousePos;
+    Vector2 movement;
 
     // Update is called once per frame
     void Update()
     {
-        float xInput = Input.GetAxisRaw("Horizontal");
-        float yInput = Input.GetAxisRaw("Vertical");
+        //Gets Input information from keypresses using WASD
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        Vector3 movement = new Vector3(xInput, yInput, 0).normalized;
-        movement = movement * speed * Time.deltaTime;
+        //This takes where your mouse is on the screen and then converts it to the unit system used by Unity with camera as a reference
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        transform.Translate(movement);
+    }
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+
+        //This is a simple math equation that subtracts the position from your mouse to the player that gives you a vector that is pointing towards the mouse
+        Vector2 lookDirection = mousePos - rb.position;
+
+        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+
+        rb.rotation = angle;
+
+       
+
     }
 }
