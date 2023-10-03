@@ -646,6 +646,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1295913126}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &986934942
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +819,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &999786748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,6 +3177,54 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1055197124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055197125}
+  - component: {fileID: 1055197126}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055197125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055197124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.841864, y: 5.734442, z: 0.101266935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055197126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055197124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647027218e4760d40bbc7b9ba8ba8837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 3468677528287588238, guid: d3efefae60524cc4ba5ce89b9f702d0c, type: 3}
+  spawnInterval: 2
+  spawnRadius: 10
+  player: {fileID: 0}
 --- !u!1 &1078558533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3348,7 +3399,7 @@ GameObject:
   - component: {fileID: 1295913130}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3732,4 +3783,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 763593740}
   - {fileID: 1379795207}
-  - {fileID: 986934945}
+  - {fileID: 1055197125}
