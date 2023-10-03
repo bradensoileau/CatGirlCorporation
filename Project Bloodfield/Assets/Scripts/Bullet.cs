@@ -5,12 +5,23 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
+    public float bulletDamage = 10f;
+    Rigidbody2D rb;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         //GameObject effect(hitEffect, transform.position, Quaternion.identity);
         //Destroy(effect, 5f);
         Destroy(gameObject);
+
+        if (collision.transform.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyStats>().TakeDamage(bulletDamage);
+        }
+
+        
+
+
     }
 
 
