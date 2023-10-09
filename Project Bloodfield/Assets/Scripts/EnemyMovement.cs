@@ -4,17 +4,34 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+    private SpriteRenderer spriteRenderer;
     public GameObject player;
-    public float speed;
+    public float speed = 3f;
+    private Rigidbody2D rb;
 
-    private float distance;
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
+        if(player != null)
+        {
+            Vector2 direction = (player.transform.position - transform.position).normalized;
 
-        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            rb.velocity = direction * speed;
+            
+            if (rb.velocity.x > 0)
+            {
+                spriteRenderer.flipX = false; //NOT FLIPPED
+            }
+            else if (rb.velocity.x < 0)
+            {
+                spriteRenderer.flipX = true; //FLIPPED
+            }
+
+        }
     }
 }
