@@ -5,9 +5,15 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public float spawnInterval = 2f;
+    public float startingSpawnInterval = 2f;
+    public float minimumSpawnInterval = 0.5f;
+    public float spawnRateIncreaseInterval = 10f;
     public float spawnRadius = 10f;
+    public float minDistanceToPlayer = 2f; //DISTANCE THAT ENEMIES CANNOT SPAWN IN
+    public float spawnTimeAdjuster = 0.1f;
     public GameObject player;
+
+    private float spawnInterval;
 
     private Camera cam;
     void Start()
@@ -15,7 +21,11 @@ public class EnemySpawner : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         cam = Camera.main;
+
+        spawnInterval = startingSpawnInterval;
+        
         StartCoroutine(SpawnEnemies());
+        StartCoroutine(IncreaseSpawnRate());
     }
     IEnumerator SpawnEnemies()
     {
@@ -30,11 +40,29 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    IEnumerator IncreaseSpawnRate()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnRateIncreaseInterval);
+            if(spawnInterval > minimumSpawnInterval)
+            {
+                spawnInterval -= spawnTimeAdjuster; 
+            }
+        }
+    }
+
     Vector3 GetRandomSpawnPosition()
     {
         Vector3 spawnPosition = Vector3.zero;
         Vector2 minBounds = cam.ViewportToWorldPoint(new Vector2(0, 0));
         Vector2 maxBounds = cam.ViewportToWorldPoint(new Vector2(1, 1));
+
+        //THE BOUNDS WHERE ENEMY CANNOT SPAWN AROUND THE PLAYER
+        float minX = player.transform.position.x + minDistanceToPlayer;
+        float maxX = player.transform.position.x - minDistanceToPlayer;
+        float minY = player.transform.position.y + minDistanceToPlayer;
+        float maxY = player.transform.position.y - minDistanceToPlayer;
 
         int side = Random.Range(0, 4);
 
