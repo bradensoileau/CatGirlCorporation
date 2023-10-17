@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     public Camera cam;
     public Rigidbody2D rb;
+    public Animator animator;
 
     [SerializeField]
     float speed = 5f;
@@ -20,6 +21,10 @@ public class Movement : MonoBehaviour
         //Gets Input information from keypresses using WASD
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Speed",movement.sqrMagnitude);
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
 
         //This takes where your mouse is on the screen and then converts it to the unit system used by Unity with camera as a reference
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
