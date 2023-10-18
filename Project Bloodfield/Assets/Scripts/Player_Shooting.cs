@@ -7,7 +7,7 @@ public class Player_Shooting : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float bulletforce = 20f;
+    public float bulletForce = 20f;
 
 
 
@@ -22,9 +22,15 @@ public class Player_Shooting : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletforce, ForceMode2D.Impulse);
-        Destroy(bullet, 5f);
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = (mousePosition - firePoint.position).normalized; // Calculate the direction to the mouse.
+
+        // Create a bullet at the firePoint's position.
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+        // Move the bullet using the Transform in the direction calculated.
+        bullet.transform.Translate(direction * bulletForce, Space.World);
+
+        Destroy(bullet, 5.0f);
     }
 }

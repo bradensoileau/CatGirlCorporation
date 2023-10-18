@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public Camera cam;
     public Rigidbody2D rb;
     public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
     [SerializeField]
     float speed = 5f;
@@ -27,7 +28,7 @@ public class Movement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
 
         //This takes where your mouse is on the screen and then converts it to the unit system used by Unity with camera as a reference
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+       mousePos = Input.mousePosition;
 
     }
 
@@ -36,12 +37,25 @@ public class Movement : MonoBehaviour
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
         //This is a simple math equation that subtracts the position from your mouse to the player that gives you a vector that is pointing towards the mouse
-        Vector2 lookDirection = mousePos - rb.position;
+       // Vector2 lookDirection = mousePos - rb.position;
 
-        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+        //float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
 
-        rb.rotation = angle;
+       // rb.rotation = angle;
+       bool isOnLeft = mousePos.x < Screen.width / 2;
 
+        if (isOnLeft && movement.x >= 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if(!isOnLeft && movement.x <= 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
        
 
     }

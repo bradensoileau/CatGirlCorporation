@@ -3067,8 +3067,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -8, y: -1, z: 0}
-  m_Size: {x: 20, y: 10, z: 1}
+  m_Origin: {x: -8, y: -5, z: 0}
+  m_Size: {x: 20, y: 14, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -3314,6 +3314,7 @@ GameObject:
   - component: {fileID: 1295913131}
   - component: {fileID: 1295913132}
   - component: {fileID: 1295913133}
+  - component: {fileID: 1295913134}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -3353,6 +3354,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   rb: {fileID: 1295913128}
   animator: {fileID: 1295913132}
+  spriteRenderer: {fileID: 1295913131}
   speed: 5
 --- !u!50 &1295913128
 Rigidbody2D:
@@ -3440,7 +3442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 979122913}
   bulletPrefab: {fileID: 2810704382897206531, guid: 442ba143a99f4ad43a64588623ceacb8, type: 3}
-  bulletforce: 20
+  bulletForce: 20
 --- !u!212 &1295913131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3610,6 +3612,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1295913134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295913124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb439b1985e4fb74abede9406da6191a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &1379795205
 GameObject:
   m_ObjectHideFlags: 0
