@@ -26,6 +26,6 @@ public class PlayerStats : MonoBehaviour
     void Die()
     {
         Debug.Log("you have died");
-        audioSource.PlayOneShot(audioSource);
+        //audioSource.PlayOneShot(audioSource);
     }
 }
