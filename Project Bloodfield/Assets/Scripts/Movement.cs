@@ -12,7 +12,6 @@ public class Movement : MonoBehaviour
     [SerializeField]
     float speed = 5f;
     
-    Vector2 mousePos;
     Vector2 movement;
 
     // Update is called once per frame
@@ -21,18 +20,22 @@ public class Movement : MonoBehaviour
         //Gets Input information from keypresses using WASD
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("Speed",movement.sqrMagnitude);
 
+        animator.SetFloat("Speed",movement.sqrMagnitude);
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
 
+<<<<<<< Updated upstream
         //This takes where your mouse is on the screen and then converts it to the unit system used by Unity with camera as a reference
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
+=======
+>>>>>>> Stashed changes
     }
 
     void FixedUpdate()
     {
+<<<<<<< Updated upstream
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
         //This is a simple math equation that subtracts the position from your mouse to the player that gives you a vector that is pointing towards the mouse
@@ -43,6 +46,9 @@ public class Movement : MonoBehaviour
         rb.rotation = angle;
 
        
+=======
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);       
+>>>>>>> Stashed changes
 
     }
 }
