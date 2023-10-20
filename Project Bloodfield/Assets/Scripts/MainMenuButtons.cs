@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
-    public string sceneName;
+    private const string Level1SceneName = "Level1";
     public AudioSource audioSource;
 
     public void PlayGame ()
     {
         audioSource.Stop();
         Debug.Log("Load1");
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(Level1SceneName);
     }
     public void QuitGame()
     {
