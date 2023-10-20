@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -8,7 +9,7 @@ public class PlayerStats : MonoBehaviour
     public PlayerDeath playerDeath;
     public float health;
     private AudioSource audioSource;
-
+    private int score;
     private void Start()
     {
         health = 60f;
