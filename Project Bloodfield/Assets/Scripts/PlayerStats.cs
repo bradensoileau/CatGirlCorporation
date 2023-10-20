@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float health = 50f;
+    public PlayerDeath playerDeath;
+    public float health;
     private AudioSource audioSource;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        health = 60f;
     }
 
     public void TakeDamage(float damageAmount)
@@ -19,13 +20,7 @@ public class PlayerStats : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            playerDeath.Kill();
         }
-    }
-
-    void Die()
-    {
-        Debug.Log("you have died");
-        //audioSource.PlayOneShot(audioSource);
     }
 }

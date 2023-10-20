@@ -29,7 +29,6 @@ public class Movement : MonoBehaviour
 
         //This takes where your mouse is on the screen and then converts it to the unit system used by Unity with camera as a reference
        mousePos = Input.mousePosition;
-
     }
 
     void FixedUpdate()
@@ -38,25 +37,6 @@ public class Movement : MonoBehaviour
 
         //This is a simple math equation that subtracts the position from your mouse to the player that gives you a vector that is pointing towards the mouse
        // Vector2 lookDirection = mousePos - rb.position;
-
-        //float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
-
-       // rb.rotation = angle;
-       bool isOnLeft = mousePos.x < Screen.width / 2;
-
-        if (isOnLeft && movement.x >= 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else if(!isOnLeft && movement.x <= 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else
-        {
-            spriteRenderer.flipX = false;
-        }
-       
 
     }
 }

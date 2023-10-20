@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class Player_Shooting : MonoBehaviour
 {
-
-    public Transform firePoint;
     public GameObject bulletPrefab;
+    public Transform firePoint;
     public float bulletForce = 20f;
 
-
-
-    // Update is called once per frame
     void Update()
     {
+        // Check for mouse input (left mouse button) to shoot
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
@@ -22,15 +19,23 @@ public class Player_Shooting : MonoBehaviour
 
     void Shoot()
     {
+        // Get the mouse position in world space
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direction = (mousePosition - firePoint.position).normalized; // Calculate the direction to the mouse.
+        mousePosition.z = 0; // Make sure it's in the same Z-plane as the 2D world
 
-        // Create a bullet at the firePoint's position.
+        // Calculate the direction from the player to the mouse cursor
+        Vector3 direction = (mousePosition - firePoint.position).normalized;
+
+        // Create a bullet instance
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
-        // Move the bullet using the Transform in the direction calculated.
-        bullet.transform.Translate(direction * bulletForce, Space.World);
+        // Access the Rigidbody2D of the bullet
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
+        // Apply a force to the bullet to make it move in the direction of the mouse cursor
+        rb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
+
+        //deystroys the bullet after a certain amount of time
         Destroy(bullet, 5.0f);
     }
 }

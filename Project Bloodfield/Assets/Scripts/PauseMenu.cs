@@ -52,6 +52,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        manager.Pause();
+        manager.SwitchToLevelMusic();
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
