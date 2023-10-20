@@ -6,26 +6,38 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    //To of course mange our music
+    public MusicManager manager;
 
-    public static bool isPaused;
-    // Start is called before the first frame update
+    private const string TitleSceneName = "TitleScreen";
+    private bool isPaused;
+
     void Start()
     {
         pauseMenu.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        HandlePauseInput();
+    }
+
+    private void HandlePauseInput()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
-                isPaused = false;
+                //integral to use the music manger as it handels pausing and switching between tracks in the music manger object
+                //it will pause current music in our Music manger object name manger. then play the track associated with the state
+                manager.Pause();
+                manager.SwitchToLevelMusic();
                 ResumeGame();
             }
             else
             {
+                manager.Pause();
+                manager.SwitchToPauseMenuMusic();
                 PauseGame();
             }
         }
@@ -49,7 +61,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
-        SceneManager.LoadScene("TitleScreen");
+        SceneManager.LoadScene(TitleSceneName);
     }
 
     public void QuitGame()
