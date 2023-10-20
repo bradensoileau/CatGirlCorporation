@@ -5,6 +5,7 @@ public class MusicManager : MonoBehaviour
     //This is for the songs that we will be playing in our level
     public AudioSource levelMusic;
     public AudioSource pauseMenuMusic;
+    public AudioSource gameOverMusic;
     //this is what we use to control which song is being played
     private AudioSource currentMusic;
 
@@ -35,6 +36,10 @@ public class MusicManager : MonoBehaviour
         PlayMusic(pauseMenuMusic);
     }
 
+    public void SwitchToGameOverMusic()
+    {
+        PlayMusic(gameOverMusic);
+    }
     private void PlayMusic(AudioSource musicSource)
     {
         currentMusic = musicSource;
