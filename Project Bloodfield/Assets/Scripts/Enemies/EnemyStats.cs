@@ -11,10 +11,12 @@ public class EnemyStats : MonoBehaviour
     //public ScoreBoard scoreBoard;
     public void TakeDamage(float damageAmount)
     {
-        if (floatingTextPrefab && health >= 0)
+        if (floatingTextPrefab)
         {
             Debug.Log("damage");
-            ShowFloatingText(damageAmount);
+            GameObject damageTextObject = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
+            DamageText damageText = damageTextObject.GetComponent<DamageText>();
+            damageText.ShowDamage(damageAmount, transform.position);
         }
 
         health -= damageAmount;
@@ -32,9 +34,9 @@ public class EnemyStats : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void ShowFloatingText(float damageAmount)
+   /* void ShowFloatingText(float damageAmount)
     {
         var spawnText = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
         spawnText.GetComponent<TextMesh>().text = damageAmount.ToString();
-    }
+    }*/
 }
