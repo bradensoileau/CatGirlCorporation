@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs;
     public float startingSpawnInterval = 2f;
     public float minimumSpawnInterval = 0.5f;
     public float spawnRateIncreaseInterval = 10f;
@@ -33,9 +34,8 @@ public class EnemySpawner : MonoBehaviour
         {
             Vector3 spawnPosition = GetRandomSpawnPosition();
 
-            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-            enemy.GetComponent<EnemyMovement>().player = player;
-
+            int randomEnemyIndex = Random.Range(0, enemyPrefabs.Length);
+            GameObject enemy = Instantiate(enemyPrefabs[randomEnemyIndex], spawnPosition, Quaternion.identity);
             yield return new WaitForSeconds(spawnInterval);
         }
     }
