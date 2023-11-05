@@ -7,6 +7,7 @@ public class PlayerDeath : MonoBehaviour
     private const string TitleSceneName = "TitleScreen";
     private const string Level1SceneName = "Level1";
     public GameObject playerDeath;
+    public GameObject healthBar;
     public MusicManager manger;
     // Update is called once per frame
     void Start()
@@ -16,6 +17,7 @@ public class PlayerDeath : MonoBehaviour
     
     public void Kill()
     {
+        healthBar.SetActive(false);
         playerDeath.SetActive(true);
         Time.timeScale = 0f;
         manger.Pause();
