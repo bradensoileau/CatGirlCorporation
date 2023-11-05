@@ -13,18 +13,10 @@ public class ScoreBoard : MonoBehaviour
 
     private void Start()
     {
-
         scoreText.text = "Score: " + 0;
     }
 
-    private void Update()
-    {
-        AddScore(1);
-    }
-
-
     public int playerScore = 0;
-
     public void AddScore(int points)
     {
         playerScore += points;
@@ -33,7 +25,7 @@ public class ScoreBoard : MonoBehaviour
 
     public void UpdateScore(int playerScore)
     {
-        scoreText.text = "Score: " + (playerScore/500).ToString();
+        scoreText.text = "Score: " + (playerScore).ToString();
     }
 
 
