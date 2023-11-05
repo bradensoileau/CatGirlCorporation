@@ -111,11 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0e01ccbd2ceec408aa13d749b88f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMesh: {fileID: 7825362400567888192}
   destoryTime: 3
-  offset: {x: 0, y: 2, z: 0}
-  randomizeTextLocation: {x: 0.5, y: 0, z: 0}
-  elapsedTime: 0
 --- !u!95 &1010708391911601705
 Animator:
   serializedVersion: 5

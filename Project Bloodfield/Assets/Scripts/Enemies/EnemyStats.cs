@@ -8,20 +8,13 @@ public class EnemyStats : MonoBehaviour
 {
     public float health = 50f;
     public GameObject floatingTextPrefab;
-    public ScoreBoard scoreBoard;
-
-    public void Start()
-    {
-        scoreBoard = GameObject.FindObjectOfType<ScoreBoard>(); // Find the ScoreBoard script in your scene
-    }
+    //public ScoreBoard scoreBoard;
     public void TakeDamage(float damageAmount)
     {
-        if (floatingTextPrefab)
+        if (floatingTextPrefab && health >= 0)
         {
             Debug.Log("damage");
-            GameObject damageTextObject = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
-            DamageText damageText = damageTextObject.GetComponent<DamageText>();
-            damageText.ShowDamage(damageAmount, transform.position);
+            ShowFloatingText(damageAmount);
         }
 
         health -= damageAmount;
@@ -35,16 +28,13 @@ public class EnemyStats : MonoBehaviour
 
     void Die()
     {
-        if (scoreBoard != null)
-        {
-            scoreBoard.AddScore(1);
-        }
+        //scoreBoard.AddScore(10);
         Destroy(gameObject);
     }
 
-   /* void ShowFloatingText(float damageAmount)
+    void ShowFloatingText(float damageAmount)
     {
         var spawnText = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
         spawnText.GetComponent<TextMesh>().text = damageAmount.ToString();
-    }*/
+    }
 }

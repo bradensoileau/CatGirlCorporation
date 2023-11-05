@@ -9,7 +9,8 @@ public class PlayerStats : MonoBehaviour
     public PlayerDeath playerDeath;
     public float health;
     private AudioSource audioSource;
-    public void Start()
+    private int score;
+    private void Start()
     {
         health = 60f;
     }
