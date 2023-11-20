@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject scoreBoard;
+    public GameObject healthBar;
     //To of course mange our music
     public MusicManager manager;
 
@@ -47,6 +49,8 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
+        scoreBoard.SetActive(false);
+        healthBar.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -56,6 +60,8 @@ public class PauseMenu : MonoBehaviour
         manager.Pause();
         manager.SwitchToLevelMusic();
         pauseMenu.SetActive(false);
+        scoreBoard.SetActive(true);
+        healthBar.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
