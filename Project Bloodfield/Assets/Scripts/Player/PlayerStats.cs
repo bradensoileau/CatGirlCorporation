@@ -9,7 +9,6 @@ public class PlayerStats : MonoBehaviour
     public PlayerDeath playerDeath;
     public float health;
     private AudioSource audioSource;
-    private int score;
     private void Start()
     {
         health = 60f;
@@ -22,6 +21,16 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0)
         {
             playerDeath.Kill();
+        }
+    }
+
+    public void HealDamage(float healAmount)
+    {
+        health += healAmount;
+
+        if(health >= 60)
+        {
+            health = 60;
         }
     }
 }
