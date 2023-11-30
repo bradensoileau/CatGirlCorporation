@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     public float minimumSpawnInterval = 0.5f;
     public float spawnRateIncreaseInterval = 10f;
     public float spawnRadius = 10f;
-    public float minDistanceToPlayer = 2f; //DISTANCE THAT ENEMIES CANNOT SPAWN IN
+    public float minDistanceToPlayer = 5f; //DISTANCE THAT ENEMIES CANNOT SPAWN IN
     public float spawnTimeAdjuster = 0.1f;
     public GameObject player;
 
