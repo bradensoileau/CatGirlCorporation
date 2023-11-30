@@ -28,9 +28,11 @@ public class PlayerStats : MonoBehaviour
     {
         health += healAmount;
 
+        
         if(health >= 60)
         {
             health = 60;
         }
+        
     }
 }
