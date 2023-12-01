@@ -8,7 +8,13 @@ public class EnemyStats : MonoBehaviour
 {
     public float health = 50f;
     public GameObject floatingTextPrefab;
-    //public ScoreBoard scoreBoard;
+    public ScoreBoard scoreBoard;
+
+    public void Start()
+    {
+        scoreBoard = GameObject.FindObjectOfType<ScoreBoard>(); // Find the ScoreBoard script in your scene
+    }
+
     public void TakeDamage(float damageAmount)
     {
         if (floatingTextPrefab && health >= 0)
@@ -28,7 +34,10 @@ public class EnemyStats : MonoBehaviour
 
     void Die()
     {
-        //scoreBoard.AddScore(10);
+        if (scoreBoard != null)
+        {
+            scoreBoard.AddScore(1);
+        }
         Destroy(gameObject);
     }
 
