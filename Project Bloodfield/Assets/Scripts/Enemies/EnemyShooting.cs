@@ -3,66 +3,55 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public GameObject player;
-    public GameObject projectilePrefab;
-    public float shootInterval = 3f;
+    public GameObject laserPrefab;
+    public float shootInterval = 10f;
     private float timeSinceLastShot = 0f;
-    public LayerMask projectileLayer;
+    public float maintainDistance = 10f;
+    public float moveSpeed = 5f;
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
     }
+
     void Update()
     {
-        // Ensure the player and projectilePrefab are set
-        if (player == null || projectilePrefab == null)
+        if (player == null || laserPrefab == null)
         {
-            Debug.LogError("Player or Projectile Prefab not assigned!");
+            Debug.LogError("Player or Laser Prefab not assigned!");
             return;
         }
 
-        // Calculate the distance between the enemy and the player
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-        // Check if it's time to shoot
-        timeSinceLastShot += Time.deltaTime;
-        if (timeSinceLastShot >= shootInterval && distanceToPlayer < 10f) // You can adjust the shooting distance as needed
+        if (distanceToPlayer < maintainDistance)
         {
-            ShootProjectile();
-            timeSinceLastShot = 0f; // Reset the timer
+            Vector3 directionAwayFromPlayer = transform.position - player.transform.position;
+            transform.position += directionAwayFromPlayer.normalized * moveSpeed * Time.deltaTime;
+        }
+
+        timeSinceLastShot += Time.deltaTime;
+
+        if (timeSinceLastShot >= shootInterval && distanceToPlayer >= maintainDistance)
+        {
+            ShootLaser();
+            timeSinceLastShot = 0f;
         }
     }
 
-    void ShootProjectile()
+    void ShootLaser()
     {
-        // Instantiate a projectile and set its position and rotation
-        GameObject projectile = Instantiate(projectilePrefab, transform.position + transform.forward, Quaternion.identity);
+        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
+        Vector3 spawnPosition = transform.position + directionToPlayer * 1.0f; // Adjust this offset as needed
 
-        projectile.layer = LayerMask.NameToLayer("Projectile");
+        GameObject laserInstance = Instantiate(laserPrefab, spawnPosition, lookRotation);
 
-        // Calculate the direction from the enemy to the player
-        Vector3 direction = (player.transform.position - transform.position).normalized;
-
-        // Set the projectile's velocity (speed)
-        float projectileSpeed = 10f; // You can adjust the projectile speed as needed
-        float projectileDistance = 5f; // You can adjust the projectile distance as needed
-        Vector3 targetPosition = transform.position + direction * projectileDistance;
-        StartCoroutine(MoveProjectile(projectile.transform, targetPosition, projectileSpeed));
-
-        System.Collections.IEnumerator MoveProjectile(Transform projectileTransform, Vector3 targetPosition, float speed)
+        // Launch the laser towards the player
+        LaserProjectile laserProjectile = laserInstance.GetComponent<LaserProjectile>();
+        if (laserProjectile != null)
         {
-            while (projectileTransform != null && Vector3.Distance(projectileTransform.position, targetPosition) > 0.1f)
-            {
-                projectileTransform.position = Vector3.MoveTowards(projectileTransform.position, targetPosition, speed * Time.deltaTime);
-                yield return null;
-            }
-
-            // Check if the projectileTransform is still valid before trying to destroy it
-            if (projectileTransform != null)
-            {
-                // Destroy the projectile when it reaches the target
-                Destroy(projectileTransform.gameObject);
-            }
+            laserProjectile.Launch(player.transform.position);
         }
     }
 }
