@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6743852596794006133}
   - component: {fileID: -656557068436946664}
   - component: {fileID: 5134959083016034879}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IceShard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
