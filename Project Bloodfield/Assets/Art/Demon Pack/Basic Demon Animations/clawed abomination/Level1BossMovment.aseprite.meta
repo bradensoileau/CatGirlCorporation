@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6ae9feedc1e699c4a9b70c2fae1738dc
+guid: 6d2618d927778384290ec58eee6a2acb
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 30
-    spriteID: 1950ca6d0b3e4a741a960a353a587034
+    spriteID: 778d7c322b9fee04db730831dde73966
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 30
-    spriteID: ef0523df13a79b446afb94bff1fae788
+    spriteID: d5b552b11fb57af47aa8a08bec68ed99
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 30
-    spriteID: 1ae240cb7baa2014796f6ad4d61bd0e7
+    spriteID: 91926499b54f09e4c9325fd9b7127d42
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -215,7 +215,7 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 30
-      spriteId: 1950ca6d0b3e4a741a960a353a587034
+      spriteId: 778d7c322b9fee04db730831dde73966
     - name: Level1BossMovment_Frame_1
       frameIndex: 1
       cellRect:
@@ -223,7 +223,7 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 29
-      spriteId: 2bf472949e2a8f643aefecf3c31f7836
+      spriteId: 0703b0ba3226d2a4b87ad4e8435e7906
     - name: Level1BossMovment_Frame_2
       frameIndex: 2
       cellRect:
@@ -231,7 +231,7 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 30
-      spriteId: ef0523df13a79b446afb94bff1fae788
+      spriteId: d5b552b11fb57af47aa8a08bec68ed99
     - name: Level1BossMovment_Frame_3
       frameIndex: 3
       cellRect:
@@ -239,7 +239,7 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 30
-      spriteId: 1ae240cb7baa2014796f6ad4d61bd0e7
+      spriteId: 91926499b54f09e4c9325fd9b7127d42
     linkedCells: []
     parentIndex: -1
   platformSettings: []
