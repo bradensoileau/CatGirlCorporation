@@ -36,9 +36,9 @@ public class EnemyController : MonoBehaviour
     void ShootProjectile()
     {
         // Instantiate a projectile and set its position and rotation
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, transform.position + transform.forward, Quaternion.identity);
 
-        projectile.layer = gameObject.layer;
+        projectile.layer = LayerMask.NameToLayer("Projectile");
 
         // Calculate the direction from the enemy to the player
         Vector3 direction = (player.transform.position - transform.position).normalized;
@@ -51,14 +51,18 @@ public class EnemyController : MonoBehaviour
 
         System.Collections.IEnumerator MoveProjectile(Transform projectileTransform, Vector3 targetPosition, float speed)
         {
-            while (Vector3.Distance(projectileTransform.position, targetPosition) > 0.1f)
+            while (projectileTransform != null && Vector3.Distance(projectileTransform.position, targetPosition) > 0.1f)
             {
                 projectileTransform.position = Vector3.MoveTowards(projectileTransform.position, targetPosition, speed * Time.deltaTime);
                 yield return null;
             }
 
-            // Destroy the projectile when it reaches the target
-            Destroy(projectileTransform.gameObject);
+            // Check if the projectileTransform is still valid before trying to destroy it
+            if (projectileTransform != null)
+            {
+                // Destroy the projectile when it reaches the target
+                Destroy(projectileTransform.gameObject);
+            }
         }
     }
 }
