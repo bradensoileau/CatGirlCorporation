@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2824737974943532151}
   - component: {fileID: -6267407773842445312}
   - component: {fileID: 5003741158942304174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GigaLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
