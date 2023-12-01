@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5175350827052765058}
   - component: {fileID: 4032884343145712149}
   - component: {fileID: 464517586266259825}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: floatingEyeEnemyPrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000402892, y: 0.0028201342}
+  m_Offset: {x: -0.00040289015, y: 0.07938673}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -182,7 +182,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12051803, y: 0.1317986}
+  m_Size: {x: 0.12051803, y: 0.14331238}
   m_EdgeRadius: 0
 --- !u!114 &184907583504492706
 MonoBehaviour:
@@ -242,3 +242,6 @@ MonoBehaviour:
   player: {fileID: 0}
   projectilePrefab: {fileID: 2810704382897206531, guid: 442ba143a99f4ad43a64588623ceacb8, type: 3}
   shootInterval: 3
+  projectileLayer:
+    serializedVersion: 2
+    m_Bits: 64
