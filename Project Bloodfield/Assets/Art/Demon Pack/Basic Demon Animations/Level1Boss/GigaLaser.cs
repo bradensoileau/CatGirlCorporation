@@ -7,7 +7,7 @@ public class GigaLaserProjectile : MonoBehaviour
     [SerializeField]
     private float damage = 50f; // High damage value for the Giga Laser
     [SerializeField]
-    private float maxLifetime = 6f; // Shorter lifespan for the Giga Laser
+    private float maxLifetime = 6f; // Lifetime of the Giga Laser
 
     private float currentLifetime;
     private bool isDestroyed = false;
@@ -18,8 +18,6 @@ public class GigaLaserProjectile : MonoBehaviour
     {
         // Calculate the direction towards the target
         direction = (target - (Vector2)transform.position).normalized;
-
-        // Rotate the laser to face towards the target
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
@@ -38,7 +36,7 @@ public class GigaLaserProjectile : MonoBehaviour
             }
 
             // Move the laser towards its direction
-            transform.position = (Vector2)transform.position + direction * speed * Time.deltaTime;
+            transform.position += (Vector3)direction * speed * Time.deltaTime;
         }
     }
 
