@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3002520631599615375}
   - component: {fileID: 6127814101752745991}
   - component: {fileID: -689087474906028796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyPrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   floatingTextPrefab: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
+  scoreBoard: {fileID: 0}
 --- !u!50 &4486314764484835736
 Rigidbody2D:
   serializedVersion: 4
