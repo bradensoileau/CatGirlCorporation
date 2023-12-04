@@ -6,15 +6,18 @@ using UnityEngine.UIElements;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
+    public GameObject bossPrefab;
     public float startingSpawnInterval = 2f;
     public float minimumSpawnInterval = 0.5f;
     public float spawnRateIncreaseInterval = 10f;
     public float spawnRadius = 10f;
     public float minDistanceToPlayer = 5f; //DISTANCE THAT ENEMIES CANNOT SPAWN IN
     public float spawnTimeAdjuster = 0.1f;
+    public int enemiesSpawnedBeforeBoss = 50;
     public GameObject player;
 
     private float spawnInterval;
+    private int enemiesSpawned;
 
     private Camera cam;
     void Start()
@@ -24,7 +27,9 @@ public class EnemySpawner : MonoBehaviour
         cam = Camera.main;
 
         spawnInterval = startingSpawnInterval;
-        
+
+        enemiesSpawned = 0;
+
         StartCoroutine(SpawnEnemies());
         StartCoroutine(IncreaseSpawnRate());
     }
@@ -36,6 +41,21 @@ public class EnemySpawner : MonoBehaviour
 
             int randomEnemyIndex = Random.Range(0, enemyPrefabs.Length);
             GameObject enemy = Instantiate(enemyPrefabs[randomEnemyIndex], spawnPosition, Quaternion.identity);
+
+            enemiesSpawned++;
+
+            // Check if it's time to spawn a boss
+            if (enemiesSpawned % enemiesSpawnedBeforeBoss == 0)
+            {
+                SpawnBoss();
+            }
+
+            void SpawnBoss()
+            {
+                Vector3 bossSpawnPosition = GetRandomSpawnPosition();
+                Instantiate(bossPrefab, bossSpawnPosition, Quaternion.identity);
+            }
+
             yield return new WaitForSeconds(spawnInterval);
         }
     }
@@ -45,9 +65,9 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnRateIncreaseInterval);
-            if(spawnInterval > minimumSpawnInterval)
+            if (spawnInterval > minimumSpawnInterval)
             {
-                spawnInterval -= spawnTimeAdjuster; 
+                spawnInterval -= spawnTimeAdjuster;
             }
         }
     }
@@ -86,5 +106,3 @@ public class EnemySpawner : MonoBehaviour
     }
 
 }
-
-
