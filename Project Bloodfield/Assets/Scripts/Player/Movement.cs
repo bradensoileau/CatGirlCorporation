@@ -11,10 +11,12 @@ public class Movement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     [SerializeField]
-    float speed = 5f;
+    public float speed { get; set; } = 5f;
     
     Vector2 mousePos;
     Vector2 movement;
+
+    
 
     // Update is called once per frame
     void Update()
