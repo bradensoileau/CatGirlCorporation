@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 5
-  maxLifetime: 2
+  maxLifetime: 4
 --- !u!50 &4235429815925359550
 Rigidbody2D:
   serializedVersion: 4
