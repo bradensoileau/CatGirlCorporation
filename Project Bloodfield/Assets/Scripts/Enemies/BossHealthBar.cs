@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class BossHealthBar : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -19,6 +20,10 @@ public class BossHealthBar : MonoBehaviour
         boss = GameObject.FindGameObjectWithTag("Enemy");
         bossHealth = boss.GetComponent<EnemyStats>();
         maxHealth = bossHealth.health;
+        if(!boss)
+        {
+            bossHealthBar.SetActive(false);
+        }
     }
 
     // Update is called once per frame
