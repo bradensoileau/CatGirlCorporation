@@ -8,16 +8,17 @@ public class Powerup : MonoBehaviour
 
     public string type;
     public GameObject player;
+    public PlayerStats playerStats;
     public string playerTag = "Player";
 
-    // Finds the player
-    protected void Start()
+    void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");     
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerStats = player.GetComponent<PlayerStats>();     
     }
 
-    // When Collision
-    protected void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(playerTag))
         {
@@ -25,9 +26,10 @@ public class Powerup : MonoBehaviour
         }
     }
 
-    // BooWhomp
     void Pickup()
     {
         Debug.Log("Power Up acquired by: " + gameObject.name);
+        playerStats.HealDamage(30);
+        gameObject.SetActive(false); // Deactivate the powerup object
     }
 }

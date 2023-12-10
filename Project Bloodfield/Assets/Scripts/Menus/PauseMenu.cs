@@ -8,7 +8,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject scoreBoard;
     public GameObject healthBar;
-    public GameObject bossHealthBar;
     //To of course mange our music
     public MusicManager manager;
 
@@ -52,7 +51,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         scoreBoard.SetActive(false);
         healthBar.SetActive(false);
-        bossHealthBar.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -64,7 +62,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         scoreBoard.SetActive(true);
         healthBar.SetActive(true);
-        bossHealthBar.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }

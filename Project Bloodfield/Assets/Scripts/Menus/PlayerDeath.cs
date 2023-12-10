@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
     private const string TitleSceneName = "TitleScreen";
-    private const string Level2SceneName = "02Level";
+    private const string Level1SceneName = "Level1";
     public GameObject playerDeath;
     public GameObject healthBar;
     public MusicManager manger;
-    public GameObject bossHealthBar;
     // Update is called once per frame
     void Start()
     {
@@ -20,7 +19,6 @@ public class PlayerDeath : MonoBehaviour
     {
         healthBar.SetActive(false);
         playerDeath.SetActive(true);
-        bossHealthBar.SetActive(false);
         Time.timeScale = 0f;
         manger.Pause();
         manger.SwitchToGameOverMusic();
@@ -29,7 +27,7 @@ public class PlayerDeath : MonoBehaviour
     {
         playerDeath.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(Level2SceneName);
+        SceneManager.LoadScene(Level1SceneName);
     }
 
     public void MainMenuButton()
