@@ -10,18 +10,10 @@ public class SpeedPowerup : Powerup
     public Movement movement;
 
     // Find the player and their movement
-    void Start()
+    new void Start()
     { 
         player = GameObject.FindGameObjectWithTag("Player");  
         movement = player.GetComponent<Movement>();    
-    }
-
-    protected void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag(playerTag))
-        {
-            Pickup();
-        }
     }
 
     // Gives Speed Boost

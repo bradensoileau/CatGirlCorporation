@@ -7,19 +7,10 @@ public class HealthPack : Powerup
     public PlayerStats playerStats;
 
     // Finds the Player and Finds their stats
-    void Start()
+    new void Start()
     { 
         player = GameObject.FindGameObjectWithTag("Player");  
         playerStats = player.GetComponent<PlayerStats>();    
-    }
-
-
-    protected void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag(playerTag))
-        {
-            Pickup();
-        }
     }
 
     // Gives Health
