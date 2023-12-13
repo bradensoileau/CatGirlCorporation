@@ -8,18 +8,26 @@ using System.Threading.Tasks;
 public class SpeedPowerup : Powerup
 {
     public Movement movement;
+    //public string playerTag = "Player";
 
     // Find the player and their movement
     new void Start()
     { 
-        player = GameObject.FindGameObjectWithTag("Player");  
         movement = player.GetComponent<Movement>();    
+    }
+
+    protected new void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            Pickup();
+        }
     }
 
     // Gives Speed Boost
     void Pickup()
     {
-        Debug.Log("Power Up acquired by: " + gameObject.name);
+        Debug.Log("Power Up acquired by: sped" + gameObject.name);
         GiveSpeedBoost();
         gameObject.SetActive(false); // Deactivate the powerup object
     }

@@ -17,21 +17,18 @@ public class BossHealthBar : MonoBehaviour
 
     void Start()
     {
+        bossHealthBar.SetActive(false);
         boss = GameObject.FindGameObjectWithTag("Enemy");
         bossHealth = boss.GetComponent<EnemyStats>();
         maxHealth = bossHealth.health;
-        if(!boss)
-        {
-            bossHealthBar.SetActive(false);
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!boss)
+        if(boss)
         {
-            bossHealthBar.SetActive(false);
+            bossHealthBar.SetActive(true);
         }
         float currentHealth = bossHealth.health;
         healthBar.fillAmount = currentHealth / maxHealth;
