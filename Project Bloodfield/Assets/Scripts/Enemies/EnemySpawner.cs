@@ -64,7 +64,7 @@ public class EnemySpawner : MonoBehaviour
     {
         timeSinceLastWave += Time.deltaTime;
 
-        if(currentWaveIndex < waves.Count && timeSinceLastWave >= timeBetweenWaves)
+        if(currentWaveIndex < 5 && timeSinceLastWave >= timeBetweenWaves)
         {
             StartCoroutine(SpawnWave());
             timeSinceLastWave = 0f;
@@ -103,7 +103,10 @@ public class EnemySpawner : MonoBehaviour
                 yield return new WaitForSeconds(waves[currentWaveIndex].timeBetweenSpawns);
                 enemiesRemaining--;
             }
+
         }
+
+
     }
 
     void SpawnEnemy(Transform spawnPoint)
@@ -112,4 +115,8 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(enemyPrefabs[randomEnemyIndex], spawnPoint.position, spawnPoint.rotation);
     }
 
+    void SpawnBoss(Transform spawnPoint)
+    {
+        Instantiate(bossPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
 }
