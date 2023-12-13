@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
-    // Make sure to assign the player tag in the Unity editor
-
-    public string type;
     public GameObject player;
     public string playerTag = "Player";
 
@@ -28,6 +25,6 @@ public class Powerup : MonoBehaviour
     // BooWhomp
     void Pickup()
     {
-        Debug.Log("Power Up acquired by: " + gameObject.name);
+        Debug.Log("Power Up acquired by: ");
     }
 }
