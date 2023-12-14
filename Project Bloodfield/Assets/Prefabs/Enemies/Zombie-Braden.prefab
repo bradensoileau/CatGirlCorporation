@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 8151269975515443203}
   - component: {fileID: 1043656972084094526}
   - component: {fileID: 1765231942449201597}
+  - component: {fileID: 554043642603703117}
+  - component: {fileID: 4970096516339650835}
+  - component: {fileID: 7944334328804388882}
   m_Layer: 7
   m_Name: Zombie-Braden
   m_TagString: Enemy
@@ -216,3 +219,47 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &554043642603703117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176667261541300266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc24616fce61b6a46b34677771512595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 3
+--- !u!114 &4970096516339650835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176667261541300266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f50c9d53a962b429c8b4b221b57b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  playerTag: Player
+--- !u!114 &7944334328804388882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176667261541300266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  floatingTextPrefab: {fileID: 0}
+  scoreBoard: {fileID: 0}
+  isAttacking: 0
