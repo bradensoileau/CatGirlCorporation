@@ -2,27 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using System.Threading;
-using System.Threading.Tasks;
+
 
 public class BasicEnemyDamage : MonoBehaviour
 {
-    public int damageAmount = 1;
-
-    private async void OnCollisionEnter2D(Collision2D collision)
+    public float attackDamage = 1f;
+    public GameObject player;
+    public float attackCooldown = 3f; // Cooldown time in seconds
+    private float timeSinceLastAttack = 0f;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject == player && timeSinceLastAttack >= attackCooldown)
         {
-        PlayerStats playerHealth = collision.gameObject.GetComponent<PlayerStats>();
-            while(collision.gameObject.CompareTag("Player"))
+            Attack();
+        }
+    }
+
+    public void Attack()
+    {
+        if (timeSinceLastAttack >= attackCooldown)
+        {
+            timeSinceLastAttack = 0f; // Reset the cooldown timer
+            ApplyDamage();
+        }
+    }
+    private void ApplyDamage()
+    {
+        if (player != null)
+        {
+            PlayerStats playerStats = player.GetComponent<PlayerStats>();
+            if (playerStats != null)
             {
-                if(playerHealth != null)
-                {
-                    playerHealth.TakeDamage(damageAmount);
-                    await Task.Delay(1000);
-                }
+                playerStats.TakeDamage(attackDamage);
             }
         }
     }
+
 }
 
