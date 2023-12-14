@@ -27,6 +27,7 @@ public class IceProjectile : MonoBehaviour
 
     void Update()
     {
+
         if (!isDestroyed)
         {
             currentLifetime += Time.deltaTime;

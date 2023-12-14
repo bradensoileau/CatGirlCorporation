@@ -1,16 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float followSpeed = 2f;
-    public Transform target;
+    public Transform target; // Assign your player's transform here
+    public float smoothing = 5f; // Adjust this value to change the smoothness of the camera movement
+    Vector3 offset; // The initial offset from the target
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y, -10);
-        transform.position = Vector3.Slerp(transform.position, newPos, followSpeed * Time.deltaTime);
+        // Calculate the initial offset.
+        offset = transform.position - target.position;
+    }
+
+    void FixedUpdate()
+    {
+        // Create a position the camera is aiming for based on the offset from the target.
+        Vector3 targetCamPos = target.position + offset;
+
+        // Smoothly interpolate between the camera's current position and its target position.
+        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
     }
 }
