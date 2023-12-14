@@ -140,6 +140,10 @@ PrefabInstance:
       propertyPath: bossHealth
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1050143043946615218, guid: 2ca74762133c22e4cbef331e4bfb7249, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1260357535245672594, guid: 2ca74762133c22e4cbef331e4bfb7249, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -155,6 +159,14 @@ PrefabInstance:
     - target: {fileID: 2590670105312964503, guid: 2ca74762133c22e4cbef331e4bfb7249, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864426409516264769, guid: 2ca74762133c22e4cbef331e4bfb7249, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499912898757186015, guid: 2ca74762133c22e4cbef331e4bfb7249, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4885141733436000572, guid: 2ca74762133c22e4cbef331e4bfb7249, type: 3}
       propertyPath: m_LocalPosition.x
