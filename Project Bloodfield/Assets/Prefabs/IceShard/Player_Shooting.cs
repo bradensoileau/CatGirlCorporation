@@ -8,6 +8,8 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
+
+        if (Camera.main == null) return;
         if (Input.GetMouseButtonDown(0)) // Check for left mouse button click
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -21,7 +23,13 @@ public class PlayerShooting : MonoBehaviour
     {
         GameObject iceProjectile = Instantiate(iceProjectilePrefab, transform.position, Quaternion.identity);
         IceProjectile iceScript = iceProjectile.GetComponent<IceProjectile>();
-        
+
+        if (iceProjectilePrefab == null)
+        {
+            Debug.LogError("Ice projectile prefab is not assigned!");
+            return;
+        }
+
         //safty measure in order to prevent calling a null iceScript if it does not exist
         if (iceScript != null)
         {

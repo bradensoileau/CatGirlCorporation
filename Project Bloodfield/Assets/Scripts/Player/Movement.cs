@@ -12,33 +12,37 @@ public class Movement : MonoBehaviour
 
     [SerializeField]
     public float speed { get; set; } = 5f;
-    
+
     Vector2 mousePos;
     Vector2 movement;
-
-    
 
     // Update is called once per frame
     void Update()
     {
-        //Gets Input information from keypresses using WASD
+        // Gets Input information from keypresses using WASD
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("Speed",movement.sqrMagnitude);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
 
-        //This takes where your mouse is on the screen and then converts it to the unit system used by Unity with camera as a reference
-       mousePos = Input.mousePosition;
+        // This takes where your mouse is on the screen and then converts it to the unit system used by Unity with the camera as a reference
+        mousePos = Input.mousePosition;
+
+        // Flip the sprite based on the player's movement direction
+        if (movement.x > 0)
+        {
+            spriteRenderer.flipX = false; // Face right
+        }
+        else if (movement.x < 0)
+        {
+            spriteRenderer.flipX = true; // Face left
+        }
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-
-        //This is a simple math equation that subtracts the position from your mouse to the player that gives you a vector that is pointing towards the mouse
-       // Vector2 lookDirection = mousePos - rb.position;
-
     }
 }
