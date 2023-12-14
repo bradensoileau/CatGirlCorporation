@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: -5665281241927444552}
   - component: {fileID: 7399937824664157359}
   - component: {fileID: 8052178726838157949}
+  - component: {fileID: 1266650666591093713}
   m_Layer: 7
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997824747573260385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e88f2a69ddbfbad4a89fa166eb3252ef, type: 3}
   m_Name: 
@@ -241,3 +242,18 @@ MonoBehaviour:
   player: {fileID: 0}
   smallLaserPrefab: {fileID: 1211160103410176303, guid: fa6937cb77e10cd47bbda6b2bfc7c1fb, type: 3}
   shootInterval: 5
+--- !u!114 &1266650666591093713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997824747573260385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  floatingTextPrefab: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
+  scoreBoard: {fileID: 0}
