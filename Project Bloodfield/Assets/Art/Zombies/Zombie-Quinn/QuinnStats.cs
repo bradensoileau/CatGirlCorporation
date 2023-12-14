@@ -5,17 +5,19 @@ using UnityEngine;
 public class QuinnStats : MonoBehaviour
 {
     public float health = 70f;
-    public float movementSpeed = 2;
     public float rangedAttackCooldown = 2f; // Cooldown time for ranged attack in seconds
     public GameObject slimeBallPrefab; // Assign this in the inspector with your slime ball projectile GameObject
-    public float detectionRange = 40f; // Detection range in units
+    public float detectionRange = 40f; // Detection range in unit
     private float timeSinceLastRangedAttack = 0f;
     private Animator animator;
     public GameObject player; // Assign this in the inspector with your player GameObject
     private Transform targetTransform;
+    public GameObject floatingTextPrefab;
+    public ScoreBoard scoreBoard; // If you need a ScoreBoard reference
 
     private void Start()
     {
+        scoreBoard = GameObject.FindObjectOfType<ScoreBoard>();
         animator = GetComponent<Animator>();
         if (player != null)
         {
@@ -43,18 +45,7 @@ public class QuinnStats : MonoBehaviour
             {
                 RangedAttack();
             }
-
-            MoveTowardsPlayer();
         }
-    }
-
-    private void MoveTowardsPlayer()
-    {
-        // Moves to player
-        Vector3 direction = (targetTransform.position - transform.position).normalized;
-        transform.position += direction * movementSpeed * Time.deltaTime;
-        // Plays walk animation
-        Walk();
     }
 
     public void RangedAttack()
@@ -83,7 +74,25 @@ public class QuinnStats : MonoBehaviour
         }
     }
 
-private void PlayDamageAnimation()
+    public void TakeDamage(float damageAmount)
+    {
+        if (health > 0)
+        {
+            if (floatingTextPrefab)
+            {
+                ShowFloatingText(damageAmount);
+            }
+
+            health -= damageAmount;
+
+            if (health <= 0)
+            {
+                Die();
+            }
+        }
+    }
+
+    private void PlayDamageAnimation()
     {
         animator.SetTrigger("TakeDamage"); // Assuming you have a trigger named "TakeDamage" in your Animator
     }
@@ -100,8 +109,8 @@ private void PlayDamageAnimation()
 
     private void Die()
     {
-        //scoreBoard.IncrementScore();
-        gameObject.SetActive(false); // Or Destroy(gameObject); based on your preference
+        scoreBoard.AddScore(3);
+        Destroy(gameObject);
     }
 
     private void ShowFloatingText(float damageAmount)

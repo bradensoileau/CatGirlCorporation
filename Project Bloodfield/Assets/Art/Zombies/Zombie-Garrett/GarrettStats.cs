@@ -5,18 +5,18 @@ using UnityEngine;
 public class GarrettStats : MonoBehaviour
 {
     public float health = 70f;
-    public float movementSpeed = 2;
     public float attackDamage = 20f;
     public float attackCooldown = 3f; // Cooldown time in seconds
     private float timeSinceLastAttack = 0f;
     private Animator animator;
     public GameObject player; // Assign this in the inspector with your player GameObject
     private Transform targetTransform; // Transform of the target (player)
-    //public GameObject floatingTextPrefab;
-    // public ScoreBoard scoreBoard;
+    public GameObject floatingTextPrefab;
+    public ScoreBoard scoreBoard;
 
     private void Start()
     {
+        scoreBoard = GameObject.FindObjectOfType<ScoreBoard>();
         animator = GetComponent<Animator>();
         if (player != null)
         {
@@ -35,10 +35,6 @@ public class GarrettStats : MonoBehaviour
             timeSinceLastAttack += Time.deltaTime;
         }
 
-        if (targetTransform != null)
-        {
-            MoveTowardsPlayer();
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -49,14 +45,7 @@ public class GarrettStats : MonoBehaviour
         }
     }
 
-    private void MoveTowardsPlayer()
-    {
-        //Moves to player
-        Vector3 direction = (targetTransform.position - transform.position).normalized;
-        transform.position += direction * movementSpeed * Time.deltaTime;
-        //plays walk animation
-        Walk();
-    }
+ 
 
 
 
@@ -100,8 +89,8 @@ public class GarrettStats : MonoBehaviour
 
     private void Die()
     {
-        //scoreBoard.IncrementScore();
-        gameObject.SetActive(false); // Or Destroy(gameObject); based on your preference
+        scoreBoard.AddScore(2);
+        Destroy(gameObject);
     }
 
     private void ShowFloatingText(float damageAmount)
