@@ -9,7 +9,7 @@ public class EnemyStats : MonoBehaviour
     public float health = 50f;
     public GameObject floatingTextPrefab;
     public ScoreBoard scoreBoard;
-
+    public bool isAttacking;
     public void Start()
     {
         scoreBoard = GameObject.FindObjectOfType<ScoreBoard>(); // Find the ScoreBoard script in your scene
