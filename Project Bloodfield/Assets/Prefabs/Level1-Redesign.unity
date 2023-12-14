@@ -211,6 +211,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2075602411}
   speed: 3
+--- !u!114 &718012077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718012060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  floatingTextPrefab: {fileID: 0}
+  scoreBoard: {fileID: 0}
+  isAttacking: 0
 --- !u!1 &826964006 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
@@ -230,6 +246,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2075602411}
   speed: 3
+--- !u!114 &826964015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826964006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f50c9d53a962b429c8b4b221b57b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  playerTag: Player
+--- !u!114 &826964023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826964006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  floatingTextPrefab: {fileID: 0}
+  scoreBoard: {fileID: 0}
+  isAttacking: 0
 --- !u!1 &1053661133 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
@@ -249,6 +295,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2075602411}
   speed: 3
+--- !u!114 &1053661142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053661133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f50c9d53a962b429c8b4b221b57b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  playerTag: Player
+--- !u!114 &1053661150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053661133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  floatingTextPrefab: {fileID: 0}
+  scoreBoard: {fileID: 0}
+  isAttacking: 0
 --- !u!1 &2075602411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6368147335696242211, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
@@ -341,6 +417,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1053661141}
+    - targetCorrespondingSourceObject: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1053661142}
+    - targetCorrespondingSourceObject: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1053661150}
   m_SourcePrefab: {fileID: 100100000, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
 --- !u!1001 &4612109165406020326
 PrefabInstance:
@@ -417,6 +499,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
       insertIndex: -1
       addedObject: {fileID: 718012068}
+    - targetCorrespondingSourceObject: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 718012077}
   m_SourcePrefab: {fileID: 100100000, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
 --- !u!1001 &4622041632258737097
 PrefabInstance:
@@ -493,6 +578,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 826964014}
+    - targetCorrespondingSourceObject: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 826964015}
+    - targetCorrespondingSourceObject: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 826964023}
   m_SourcePrefab: {fileID: 100100000, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
