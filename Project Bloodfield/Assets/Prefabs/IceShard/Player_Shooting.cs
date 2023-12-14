@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject iceProjectilePrefab; // Assign your ice shard prefab in the Inspector
+    public GameObject wandPosition; // Assign your Wand GameObject in the Inspector
 
     void Update()
     {
@@ -21,16 +22,17 @@ public class PlayerShooting : MonoBehaviour
 
     void LaunchIceProjectile(Vector2 target)
     {
-        GameObject iceProjectile = Instantiate(iceProjectilePrefab, transform.position, Quaternion.identity);
-        IceProjectile iceScript = iceProjectile.GetComponent<IceProjectile>();
-
         if (iceProjectilePrefab == null)
         {
             Debug.LogError("Ice projectile prefab is not assigned!");
             return;
         }
 
-        //safty measure in order to prevent calling a null iceScript if it does not exist
+        // Instantiate the ice projectile at the wand's position.
+        GameObject iceProjectile = Instantiate(iceProjectilePrefab, wandPosition.transform.position, Quaternion.identity);
+        IceProjectile iceScript = iceProjectile.GetComponent<IceProjectile>();
+
+        // Check if iceScript is not null before calling Launch.
         if (iceScript != null)
         {
             iceScript.Launch(target);

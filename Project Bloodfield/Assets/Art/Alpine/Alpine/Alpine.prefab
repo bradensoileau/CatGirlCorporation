@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceProjectilePrefab: {fileID: 2810704382897206531, guid: 442ba143a99f4ad43a64588623ceacb8, type: 3}
+  wandPosition: {fileID: 0}
 --- !u!82 &2624619992952471425
 AudioSource:
   m_ObjectHideFlags: 0
