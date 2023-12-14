@@ -192,139 +192,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
---- !u!1 &718012060 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
-  m_PrefabInstance: {fileID: 4612109165406020326}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &718012068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718012060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc24616fce61b6a46b34677771512595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2075602411}
-  speed: 3
---- !u!114 &718012077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718012060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  floatingTextPrefab: {fileID: 0}
-  scoreBoard: {fileID: 0}
-  isAttacking: 0
---- !u!1 &826964006 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
-  m_PrefabInstance: {fileID: 4622041632258737097}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &826964014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826964006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc24616fce61b6a46b34677771512595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2075602411}
-  speed: 3
---- !u!114 &826964015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826964006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11f50c9d53a962b429c8b4b221b57b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 10
-  playerTag: Player
---- !u!114 &826964023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826964006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  floatingTextPrefab: {fileID: 0}
-  scoreBoard: {fileID: 0}
-  isAttacking: 0
---- !u!1 &1053661133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-  m_PrefabInstance: {fileID: 513277921275918280}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1053661141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053661133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc24616fce61b6a46b34677771512595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2075602411}
-  speed: 3
---- !u!114 &1053661142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053661133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11f50c9d53a962b429c8b4b221b57b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 10
-  playerTag: Player
---- !u!114 &1053661150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053661133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  floatingTextPrefab: {fileID: 0}
-  scoreBoard: {fileID: 0}
-  isAttacking: 0
 --- !u!1 &2075602411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6368147335696242211, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
@@ -338,14 +205,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 906637941438248046, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.135514
-      objectReference: {fileID: 0}
-    - target: {fileID: 906637941438248046, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6.8564277
-      objectReference: {fileID: 0}
+    - target: {fileID: 554043642603703117, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2075602411}
     - target: {fileID: 906637941438248046, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7392
@@ -386,43 +249,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6628863343209987652, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      propertyPath: health
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6628863343209987652, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2075602411}
-    - target: {fileID: 6628863343209987652, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      propertyPath: floatingTextPrefab
-      value: 
-      objectReference: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
     - target: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
       propertyPath: m_Name
       value: Zombie-Braden
       objectReference: {fileID: 0}
-    - target: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1053661141}
-    - targetCorrespondingSourceObject: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1053661142}
-    - targetCorrespondingSourceObject: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1053661150}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
 --- !u!1001 &4612109165406020326
 PrefabInstance:
@@ -436,22 +270,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2075602411}
-    - target: {fileID: 373888075601844011, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
-      propertyPath: floatingTextPrefab
-      value: 
-      objectReference: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
     - target: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
       propertyPath: m_Name
       value: Zombie-Quinn
       objectReference: {fileID: 0}
-    - target: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
+    - target: {fileID: 4096779530215613473, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2075602411}
     - target: {fileID: 4478653246885559953, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4432
@@ -495,13 +321,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 718012068}
-    - targetCorrespondingSourceObject: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 718012077}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
 --- !u!1001 &4622041632258737097
 PrefabInstance:
@@ -551,39 +371,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3447419551133018684, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2075602411}
     - target: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
       propertyPath: m_Name
       value: Zombie-Garrett
       objectReference: {fileID: 0}
-    - target: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197565457028840672, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2075602411}
-    - target: {fileID: 9197565457028840672, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
-      propertyPath: floatingTextPrefab
-      value: 
-      objectReference: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 826964014}
-    - targetCorrespondingSourceObject: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 826964015}
-    - targetCorrespondingSourceObject: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 826964023}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

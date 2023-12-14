@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 7024420759121302739}
   - component: {fileID: 1562104888549274274}
   - component: {fileID: 1778472536092315667}
+  - component: {fileID: 3447419551133018684}
+  - component: {fileID: 3037246125082817876}
+  - component: {fileID: 3365686607054227715}
   m_Layer: 7
   m_Name: Zombie-Garrett
   m_TagString: Enemy
@@ -216,3 +219,47 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3447419551133018684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452440168534046063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc24616fce61b6a46b34677771512595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 3
+--- !u!114 &3037246125082817876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452440168534046063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f50c9d53a962b429c8b4b221b57b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  playerTag: Player
+--- !u!114 &3365686607054227715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452440168534046063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  floatingTextPrefab: {fileID: 0}
+  scoreBoard: {fileID: 0}
+  isAttacking: 0
