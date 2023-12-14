@@ -37,7 +37,7 @@ public class Movement : MonoBehaviour
         }
         else if (movement.x < 0)
         {
-            spriteRenderer.flipX = true; // Face left
+            spriteRenderer.flipX = false; // Face left
         }
     }
 
