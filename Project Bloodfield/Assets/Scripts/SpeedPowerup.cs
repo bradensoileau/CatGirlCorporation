@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 public class SpeedPowerup : Powerup
 {
     public Movement movement;
+    public Renderer rend;
     //public string playerTag = "Player";
 
     // Find the player and their movement
     new void Start()
     { 
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
         movement = player.GetComponent<Movement>();    
     }
 
@@ -28,14 +31,17 @@ public class SpeedPowerup : Powerup
     void Pickup()
     {
         Debug.Log("Power Up acquired by: sped" + gameObject.name);
-        GiveSpeedBoost();
-        gameObject.SetActive(false); // Deactivate the powerup object
+        StartCoroutine(GiveSpeedBoost());
+        //gameObject.SetActive(false); // Deactivate the powerup object
     }
 
-    public async void GiveSpeedBoost()
+    IEnumerator GiveSpeedBoost()
     {
-        movement.speed = 15;
-        await Task.Delay(5000);
-        movement.speed = 5;
+        movement.speed = 15f;
+        rend.enabled = false;
+        yield return new WaitForSeconds(5);
+        Debug.Log("Powerup over" + gameObject.name);
+        movement.speed = 5f;
+        gameObject.SetActive(false);
     }
 }
