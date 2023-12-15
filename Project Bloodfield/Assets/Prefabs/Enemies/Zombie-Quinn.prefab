@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4478653246885559953}
   - component: {fileID: 887970121852676895}
   - component: {fileID: 29511513641847290}
-  - component: {fileID: 373888075601844011}
   - component: {fileID: 4152289451078836930}
   - component: {fileID: 3127892493499297788}
   - component: {fileID: 5535387957341940910}
   - component: {fileID: 4096779530215613473}
-  - component: {fileID: 5538856211190149377}
+  - component: {fileID: 3670685517975913589}
+  - component: {fileID: 7089160756043899796}
   m_Layer: 7
   m_Name: Zombie-Quinn
   m_TagString: Enemy
@@ -112,25 +112,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &373888075601844011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3549468074099557438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211266cfc1050444fb9d005c7a946c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 70
-  rangedAttackCooldown: 2
-  slimeBallPrefab: {fileID: 475984199498024210, guid: 6e0f6730fe4cf374ab544ab95e4bbd56, type: 3}
-  detectionRange: 40
-  player: {fileID: 0}
-  floatingTextPrefab: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
-  scoreBoard: {fileID: 0}
 --- !u!50 &4152289451078836930
 Rigidbody2D:
   serializedVersion: 4
@@ -250,9 +231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc24616fce61b6a46b34677771512595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 3
---- !u!114 &5538856211190149377
+  player: {fileID: 1326153161131609632, guid: 1e84ca0d45d86e447ad772ebfbdd997c, type: 3}
+  speed: 2
+--- !u!114 &3670685517975913589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,7 +245,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  floatingTextPrefab: {fileID: 0}
+  health: 40
+  floatingTextPrefab: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
   scoreBoard: {fileID: 0}
   isAttacking: 0
+--- !u!114 &7089160756043899796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549468074099557438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca1a55360f20d94e9c70e649cd55941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1326153161131609632, guid: 1e84ca0d45d86e447ad772ebfbdd997c, type: 3}
+  slimeBallPrefab: {fileID: 475984199498024210, guid: 6e0f6730fe4cf374ab544ab95e4bbd56, type: 3}
+  shootInterval: 5
+  maintainDistance: 5
+  moveSpeed: 5

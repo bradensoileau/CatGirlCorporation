@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5134959083016034879}
   m_Layer: 3
   m_Name: IceShard
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.76286006, y: 2.9975307, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.53455406, y: 0.45849717, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.017633528, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,7 +106,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.0225127, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &-6743852596794006133
 MonoBehaviour:
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b74e1f9cc0a5c43b5eb23c4ff27225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  spellDamage: 10
-  maxLifetime: 6
+  speed: 15
+  spellDamage: 15
+  maxLifetime: 4
 --- !u!95 &-656557068436946664
 Animator:
   serializedVersion: 5
