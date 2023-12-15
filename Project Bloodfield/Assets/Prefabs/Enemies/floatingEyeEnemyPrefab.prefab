@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb2adcd24a796274889131214204b4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1326153161131609632, guid: 1e84ca0d45d86e447ad772ebfbdd997c, type: 3}
   moveSpeed: 3
   followRadius: 5
 --- !u!114 &5175350827052765058
@@ -213,6 +213,7 @@ MonoBehaviour:
   health: 25
   floatingTextPrefab: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
   scoreBoard: {fileID: 0}
+  isAttacking: 0
 --- !u!114 &464517586266259825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3c078e35eb7954e9d916ea05c006da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1326153161131609632, guid: 1e84ca0d45d86e447ad772ebfbdd997c, type: 3}
   laserPrefab: {fileID: 9200377327082326117, guid: 733afc2529e3c3c469ace97978280d5a, type: 3}
   shootInterval: 3
   maintainDistance: 10

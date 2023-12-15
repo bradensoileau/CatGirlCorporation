@@ -133,7 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c7af41073ce96438427abd10d365ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
+  player: {fileID: 1326153161131609632, guid: 1e84ca0d45d86e447ad772ebfbdd997c, type: 3}
   playerTag: Player
+  playerStats: {fileID: 0}
