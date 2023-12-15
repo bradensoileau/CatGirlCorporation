@@ -143,6 +143,14 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 573001878975324703, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: floatingTextPrefab
+      value: 
+      objectReference: {fileID: 5942004037108575103, guid: 7e2d19710f257f64ba1520d21ad9b017, type: 3}
+    - target: {fileID: 911749895786614221, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: fireBoltPrefab
+      value: 
+      objectReference: {fileID: 3408669309255736967, guid: 3e9d5641f120d7e4e8b19a2b73e2ee9e, type: 3}
     - target: {fileID: 975248011800253574, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: player
       value: 
@@ -155,6 +163,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 205630184}
+    - target: {fileID: 979488000168059875, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: laserPrefab
+      value: 
+      objectReference: {fileID: 757759639007503542, guid: 55e6194e746f39f4285892871e3e749d, type: 3}
     - target: {fileID: 2490709150470484880, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 128
@@ -179,6 +191,26 @@ PrefabInstance:
       propertyPath: spacingBetweenSpawnPoints
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3457696519028511005, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7552319975080683346, guid: 0e2d942ea8b183649b2f7b7550dfc07e, type: 3}
+    - target: {fileID: 3457696519028511005, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 7176667261541300266, guid: 51e775d09a259384298d66a93d78f4aa, type: 3}
+    - target: {fileID: 3457696519028511005, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 3452440168534046063, guid: 40ecb52ca34e7c749b3e37f0433f29e2, type: 3}
+    - target: {fileID: 3457696519028511005, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 3549468074099557438, guid: e983b19b164f989409bfd6ebaa03f033, type: 3}
+    - target: {fileID: 3457696519028511005, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 3468677528287588238, guid: d3efefae60524cc4ba5ce89b9f702d0c, type: 3}
     - target: {fileID: 4594948073168676760, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 128
@@ -205,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 307132302}
     - target: {fileID: 5430676600909223028, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 81.7
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 5430676600909223028, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -219,6 +251,14 @@ PrefabInstance:
       propertyPath: bossHealthBar
       value: 
       objectReference: {fileID: 307132302}
+    - target: {fileID: 5628971174953239605, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706675776052737559, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: playerDeath
+      value: 
+      objectReference: {fileID: 1583872432}
     - target: {fileID: 6082400502055369383, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 122.53927
@@ -272,13 +312,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6436024184859189587, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 578423468}
+    - target: {fileID: 6436024184859189587, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1488287343}
     - target: {fileID: 6436024184859189587, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: bossHealth
       value: 
-      objectReference: {fileID: 553727024}
+      objectReference: {fileID: 578423474}
     - target: {fileID: 6436024184859189587, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: bossHealthBar
       value: 
@@ -303,19 +347,34 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8433290652112104847, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433290652112104847, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8746395282087496712, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: m_Name
       value: 01_LevelContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746395282087496712, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9119477425695377763, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: m_text
       value: Big Boy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5628971174953239605, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2061867884809713305, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
     - {fileID: 8474912348057433636, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
     - {fileID: 2083126557690005948, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+    - {fileID: 7736668693825715443, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+    - {fileID: 8821549073661925152, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
@@ -340,12 +399,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7184456040866292715, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
   m_PrefabInstance: {fileID: 205630183}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &553727024 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8341746085727053057, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+--- !u!1 &578423468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2325370140531368592, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
   m_PrefabInstance: {fileID: 205630183}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &578423474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4096201034462264162, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+  m_PrefabInstance: {fileID: 205630183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578423468}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1295188ee418ed648a676e66b597f940, type: 3}
@@ -381,6 +445,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1583872432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5451619618399928666, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+  m_PrefabInstance: {fileID: 205630183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b79e312cf53564698975e988575931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1688030794 stripped

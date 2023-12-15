@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3135757936066317453}
   - component: {fileID: 2871621308550454400}
   - component: {fileID: 1261624909782891442}
-  - component: {fileID: 2190685677842239585}
+  - component: {fileID: -7075149829376845099}
   m_Layer: 0
   m_Name: PosionBall
   m_TagString: Untagged
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2190685677842239585
+--- !u!114 &-7075149829376845099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,9 +168,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 475984199498024210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4289260cc0a5b5042b8cddf031951487, type: 3}
+  m_Script: {fileID: 11500000, guid: 316989874949e02479cc0c4e7b45361b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  damage: 10
+  speed: 11
+  damage: 15
   maxLifetime: 6
