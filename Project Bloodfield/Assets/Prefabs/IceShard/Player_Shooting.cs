@@ -63,4 +63,6 @@ public class PlayerShooting : MonoBehaviour
             fireBoltScript.Launch(target);
         }
     }
+
+
 }
