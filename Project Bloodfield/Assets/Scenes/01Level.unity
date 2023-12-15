@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 911749895786614221, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
+      propertyPath: fireBoltPrefab
+      value: 
+      objectReference: {fileID: 3408669309255736967, guid: 3e9d5641f120d7e4e8b19a2b73e2ee9e, type: 3}
     - target: {fileID: 6082400502055369383, guid: 36828b3edd1cd064792cd4d8ce6d02f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 122.53927
