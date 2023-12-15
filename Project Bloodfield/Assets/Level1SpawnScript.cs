@@ -83,7 +83,7 @@ public class Level1EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnWave()
     {
-        int enemiesToSpawn = 8; // Number of enemies to spawn in each iteration
+        int enemiesToSpawn = 10; // Number of enemies to spawn in each iteration
 
         while (enemiesToSpawn > 0 && totalSpawnedEnemies < maxSpawnedEnemies)
         {
